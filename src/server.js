@@ -18,6 +18,8 @@ const bootstrap = async () => {
 
   const app = express();
 
+  app.set('trust proxy', 1);
+
   app.use(logger);
   app.use(express.json());
   app.use(cors());
